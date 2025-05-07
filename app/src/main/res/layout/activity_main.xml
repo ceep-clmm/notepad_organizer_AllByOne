@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?android:colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_vertical">
+
+        <!-- Кнопка создания -->
+        <Button
+            android:id="@+id/buttonNewNote"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Создать объект"
+            android:backgroundTint="@color/primary_light"
+            android:textColor="@android:color/white" />
+
+        <!-- Кнопка настроек -->
+        <ImageButton
+            android:id="@+id/buttonSettings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_settings"/>
+    </LinearLayout>
+
+
+    <!-- Список проектов -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/projectRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

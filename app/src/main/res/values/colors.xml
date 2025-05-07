@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Светлая тема -->
+    <color name="background_light">#f5f8ff</color>
+    <color name="primary_light">#48E613</color>
+    <color name="primary_light_hover">#82EE5D</color>
+    <color name="text_primary_light">#4A4A4A</color>
+    <color name="text_secondary_light">#6F6F6F</color>
+    <color name="accent_warning_light1">#F1DD0F</color>
+    <color name="accent_warning_light2">#F19C0F</color>
+    <color name="highlight_light">#82EE5D</color>
+
+    <!-- Темная тема -->
+    <color name="background_dark">#14212a</color>
+    <color name="primary_dark">#74FF45</color>
+    <color name="primary_dark_hover">#8AF466</color>
+    <color name="text_primary_dark">#53ef1f</color>
+    <color name="text_secondary_dark1">#646464</color>
+    <color name="text_secondary_dark2">#7C7C7C</color>
+    <color name="accent_warning_dark1">#F1E90F</color>
+    <color name="accent_warning_dark2">#F1B40F</color>
+    <color name="highlight_dark">#F1E90F</color>
+</resources>

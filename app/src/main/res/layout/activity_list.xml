@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:padding="16dp">
+
+    <!-- Верхняя панель -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_exit"
+            android:background="@android:color/transparent"
+            android:contentDescription="Назад"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Название перечня"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/saveListButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"
+            android:padding="12dp"
+            android:textSize="16sp"
+            tools:ignore="DuplicateIds" />
+    </LinearLayout>
+
+    <!-- Панель для удаления -->
+    <LinearLayout
+        android:id="@+id/selectionToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:padding="4dp"
+        android:elevation="0dp">
+
+        <Button
+            android:id="@+id/selectAllButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выбрать все"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:padding="20dp" />
+
+        <Button
+            android:id="@+id/deleteSelectedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Удалить"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:padding="20dp"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:id="@+id/cancelSelectionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Отмена"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:padding="20dp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Панель инструментов -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/sortButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_sorting"
+                android:contentDescription="Сортировка"
+                android:background="@android:color/transparent"
+                android:padding="16dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <!-- Контейнер для чеклистов -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/itemsContainer"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <!-- Кнопка добавления -->
+    <Button
+        android:id="@+id/addItemButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить пункт"
+        android:backgroundTint="@color/primary_light"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="12dp" />
+</LinearLayout>

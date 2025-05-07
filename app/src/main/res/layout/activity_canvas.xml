@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground">
+
+    <!-- Верхняя панель -->
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_exit"
+            android:background="@android:color/transparent"
+            android:contentDescription="Назад"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Название холста"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/exportButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Экспорт"
+            android:textSize="14sp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="6dp" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"
+            android:textSize="14sp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="6dp" />
+    </LinearLayout>
+
+    <!-- Панель инструментов -->
+    <LinearLayout
+        android:id="@+id/actionPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/topPanel"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <ImageButton
+            android:id="@+id/undoButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_undo"
+            android:contentDescription="Отменить"
+            android:background="@android:color/transparent"
+            android:padding="12dp" />
+
+        <ImageButton
+            android:id="@+id/redoButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_redo"
+            android:contentDescription="Повторить"
+            android:background="@android:color/transparent"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <!-- Панель инструментов -->
+    <HorizontalScrollView
+        android:id="@+id/bottomToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/brushButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_paintbrush"
+                android:contentDescription="Кисть"
+                android:background="@android:color/transparent"
+                android:padding="12dp" />
+
+            <ImageButton
+                android:id="@+id/colorPickerButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_paintpalette"
+                android:contentDescription="Выбор цвета"
+                android:background="@android:color/transparent"
+                android:padding="12dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Область рисования -->
+    <com.example.allbyone.views.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionPanel"
+        android:layout_above="@id/bottomToolbar" />
+</RelativeLayout>

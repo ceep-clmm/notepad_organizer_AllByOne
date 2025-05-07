@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Верхняя панель -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_exit"
+            android:background="@android:color/transparent"
+            android:contentDescription="Назад"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/titleEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Название заметки"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"
+            android:padding="12dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Панель форматирования -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/boldButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_bold"
+                android:contentDescription="Жирный"
+                android:background="@android:color/transparent"
+                android:padding="16dp" />
+
+            <ImageButton
+                android:id="@+id/italicButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_italic"
+                android:contentDescription="Курсив"
+                android:background="@android:color/transparent"
+                android:padding="16dp" />
+
+            <ImageButton
+                android:id="@+id/underlineButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_underline"
+                android:contentDescription="Подчёркивание"
+                android:background="@android:color/transparent"
+                android:padding="16dp" />
+
+            <ImageButton
+                android:id="@+id/highlightButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_highlight"
+                android:contentDescription="Выделить"
+                android:background="@android:color/transparent"
+                android:padding="16dp" />
+
+            <ImageButton
+                android:id="@+id/insertImageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_insert_image"
+                android:contentDescription="Вставить картинку"
+                android:background="@android:color/transparent"
+                android:padding="16dp"/>
+
+            <ImageButton
+                android:id="@+id/button_align"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_align"
+                android:contentDescription="Выравнивание"
+                android:background="@android:color/transparent"
+                android:padding="16dp"/>
+
+
+            <Spinner
+                android:id="@+id/fontSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Основной текст -->
+    <EditText
+        android:id="@+id/noteEditText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/edit_text_background"
+        android:gravity="top|start"
+        android:hint="Введите текст..."
+        android:inputType="textMultiLine"
+        android:maxLines="100"
+        android:overScrollMode="always"
+        android:padding="12dp"
+        android:scrollbars="vertical"
+        android:textColor="?android:textColorPrimary"
+        android:textCursorDrawable="@null"
+        android:textSize="16sp" />
+</LinearLayout>

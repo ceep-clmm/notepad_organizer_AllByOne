@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Толщина кисти" />
+
+    <SeekBar
+        android:id="@+id/seekBarThickness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="50"
+        android:thumbTint="@color/text_primary_dark"
+        android:progressTint="@color/text_primary_dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Прозрачность" />
+
+    <SeekBar
+        android:id="@+id/seekBarAlpha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:thumbTint="@color/text_primary_dark"
+        android:progressTint="@color/text_primary_dark" />
+
+</LinearLayout>
